@@ -2,32 +2,34 @@
 import { ref } from 'vue'
 const title = ref('Hello World')
 
-// const obj = {
-//   foo: { bar: '哈哈' },
-// }
-// console.log(obj.foo?.bar)
+// use js ES6+
+const obj = {
+  foo: 'bar',
+}
+console.log(null ?? obj?.foo)
 </script>
 
 <script>
-/* eslint-disable vue/one-component-per-file */
-// import { defineComponent } from 'vue'
+import { defineComponent } from 'vue'
 
-// const Child = defineComponent({
-//   name: 'Child',
-//   render() {
-//     return <h1>JSX Component</h1>
-//   },
-// })
+// use JSX
+const JsxEl = defineComponent({
+  name: 'Child',
+  render() {
+    return <h1>JSX Component</h1>
+  },
+})
 
-// export default defineComponent({
-//   components: { Child },
-// })
+export default defineComponent({
+  components: { JsxEl },
+})
 </script>
 
 <template>
   <div class="container">
     <h1 class="title">{{ title }}</h1>
     <div class="text">text</div>
+    <JsxEl />
   </div>
 </template>
 

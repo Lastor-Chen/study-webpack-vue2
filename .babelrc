@@ -1,0 +1,13 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "useBuiltIns": "usage",
+        "corejs": "3.32",
+        "modules": false
+      }
+    ],
+    "@vue/babel-preset-jsx"
+  ]
+}
