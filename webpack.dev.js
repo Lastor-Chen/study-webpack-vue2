@@ -18,4 +18,17 @@ module.exports = merge(commonConfig, {
     hot: true,
     clientLogLevel: 'none',
   },
+  module: {
+    rules: [
+      // css
+      {
+        test: /\.css$/,
+        use: ['vue-style-loader', 'css-loader', 'postcss-loader'],
+      },
+      {
+        test: /\.(sass|scss)$/,
+        use: ['vue-style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
+      },
+    ],
+  },
 })

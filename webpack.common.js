@@ -11,8 +11,8 @@ module.exports = {
   entry: '/src/main.js',
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'js/[name].[hash].js',
-    chunkFilename: 'js/chunk-[id].[hash].js',
+    filename: 'assets/js/[name].[hash].js',
+    chunkFilename: 'assets/js/chunk-[id].[hash].js',
   },
   resolve: {
     extensions: ['.js', '.png', '.gif', '.jpeg', '.jpg', '.vue'],
@@ -38,15 +38,6 @@ module.exports = {
         exclude: /node_modules/,
         use: ['babel-loader'],
       },
-      // css
-      {
-        test: /\.css$/,
-        use: ['vue-style-loader', 'css-loader', 'postcss-loader'],
-      },
-      {
-        test: /\.(sass|scss)$/,
-        use: ['vue-style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
-      },
       // image file
       {
         test: /\.(png|jpe?g|gif|webp)(\?.*)?$/,
@@ -58,7 +49,7 @@ module.exports = {
               fallback: {
                 loader: 'file-loader',
                 options: {
-                  name: 'static/img/[name].[hash:8].[ext]',
+                  name: 'assets/img/[name].[hash:8].[ext]',
                   esModule: false,
                 },
               },
@@ -72,7 +63,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: 'static/img/[name].[hash:8].[ext]',
+              name: 'assets/img/[name].[hash:8].[ext]',
             },
           },
         ],
@@ -88,7 +79,7 @@ module.exports = {
               fallback: {
                 loader: 'file-loader',
                 options: {
-                  name: 'static/media/[name].[hash:8].[ext]',
+                  name: 'assets/media/[name].[hash:8].[ext]',
                 },
               },
             },
@@ -106,7 +97,7 @@ module.exports = {
               fallback: {
                 loader: 'file-loader',
                 options: {
-                  name: 'static/fonts/[name].[hash:8].[ext]',
+                  name: 'assets/fonts/[name].[hash:8].[ext]',
                 },
               },
             },

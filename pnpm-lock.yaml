@@ -13,6 +13,7 @@ specifiers:
   css-loader: ^5.2.7
   file-loader: ^6.2.0
   html-webpack-plugin: ^4.5.2
+  mini-css-extract-plugin: ^1.6.2
   postcss: ^8.4.27
   postcss-loader: ^4.3.0
   sass: ^1.64.2
@@ -43,6 +44,7 @@ devDependencies:
   css-loader: 5.2.7_webpack@4.46.0
   file-loader: 6.2.0_webpack@4.46.0
   html-webpack-plugin: 4.5.2_webpack@4.46.0
+  mini-css-extract-plugin: 1.6.2_webpack@4.46.0
   postcss: 8.4.27
   postcss-loader: 4.3.0_2o5kvww5qtj45sv4onalnb76qi
   sass: 1.64.2
@@ -4662,6 +4664,18 @@ packages:
     resolution: {integrity: sha512-USPkMeET31rOMiarsBNIHZKLGgvKc/LrjofAnBlOttf5ajRvqiRA8QsenbcooctK6d6Ts6aqZXBA+XbkKthiQg==}
     engines: {node: '>=4.0.0'}
     hasBin: true
+    dev: true
+
+  /mini-css-extract-plugin/1.6.2_webpack@4.46.0:
+    resolution: {integrity: sha512-WhDvO3SjGm40oV5y26GjMJYjd2UMqrLAGKy5YS2/3QKJy2F7jgynuHTir/tgUUOiNQu5saXHdc8reo7YuhhT4Q==}
+    engines: {node: '>= 10.13.0'}
+    peerDependencies:
+      webpack: ^4.4.0 || ^5.0.0
+    dependencies:
+      loader-utils: 2.0.4
+      schema-utils: 3.3.0
+      webpack: 4.46.0_webpack-cli@3.3.12
+      webpack-sources: 1.4.3
     dev: true
 
   /minimalistic-assert/1.0.1:
