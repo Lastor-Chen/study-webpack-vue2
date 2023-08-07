@@ -9,5 +9,9 @@
       }
     ],
     "@vue/babel-preset-jsx"
+  ],
+  "plugins": [
+    "@babel/plugin-transform-optional-chaining",
+    "@babel/plugin-transform-nullish-coalescing-operator"
   ]
 }

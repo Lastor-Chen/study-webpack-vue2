@@ -54,11 +54,11 @@ module.exports = {
       // css
       {
         test: /\.css$/,
-        use: ['vue-style-loader', 'css-loader'],
+        use: ['vue-style-loader', 'css-loader', 'postcss-loader'],
       },
       {
         test: /\.(sass|scss)$/,
-        use: ['vue-style-loader', 'css-loader', 'sass-loader'],
+        use: ['vue-style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
       },
       // image file
       {

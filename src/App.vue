@@ -5,7 +5,7 @@ import testImg from '@/assets/test.png'
 
 const title = ref('Hello World')
 
-// use js ES6+
+// test js ES6+
 const obj = {
   foo: 'bar',
 }
@@ -15,7 +15,7 @@ console.log(null ?? obj?.foo)
 <script>
 import { defineComponent } from 'vue'
 
-// use JSX
+// test JSX
 const JsxEl = defineComponent({
   name: 'Child',
   render() {
@@ -46,5 +46,8 @@ export default defineComponent({
 $text-color: blue;
 .text {
   color: $text-color;
+  // test autoprefixer
+  display: flex;
+  column-gap: 4px;
 }
 </style>
