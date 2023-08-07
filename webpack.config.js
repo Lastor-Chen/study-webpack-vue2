@@ -41,6 +41,7 @@ module.exports = {
   ],
   module: {
     rules: [
+      // js
       {
         test: /\.vue$/,
         use: ['vue-loader'],
@@ -50,6 +51,7 @@ module.exports = {
         exclude: /node_modules/,
         use: ['babel-loader'],
       },
+      // css
       {
         test: /\.css$/,
         use: ['vue-style-loader', 'css-loader'],
@@ -57,6 +59,72 @@ module.exports = {
       {
         test: /\.(sass|scss)$/,
         use: ['vue-style-loader', 'css-loader', 'sass-loader'],
+      },
+      // image file
+      {
+        test: /\.(png|jpe?g|gif|webp)(\?.*)?$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 4096, // 小於限制用 url-loader 轉 base64, 否則用 file-loader
+              fallback: {
+                loader: 'file-loader',
+                options: {
+                  name: 'static/img/[name].[hash:8].[ext]',
+                  esModule: false,
+                },
+              },
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(svg)(\?.*)?$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'static/img/[name].[hash:8].[ext]',
+            },
+          },
+        ],
+      },
+      // media file
+      {
+        test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 4096,
+              fallback: {
+                loader: 'file-loader',
+                options: {
+                  name: 'static/media/[name].[hash:8].[ext]',
+                },
+              },
+            },
+          },
+        ],
+      },
+      // font
+      {
+        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/i,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 4096,
+              fallback: {
+                loader: 'file-loader',
+                options: {
+                  name: 'static/fonts/[name].[hash:8].[ext]',
+                },
+              },
+            },
+          },
+        ],
       },
     ]
   }

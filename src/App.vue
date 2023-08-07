@@ -1,5 +1,8 @@
 <script setup>
 import { ref } from 'vue'
+import mySvg from '@/assets/file-svg.svg'
+import testImg from '@/assets/test.png'
+
 const title = ref('Hello World')
 
 // use js ES6+
@@ -27,8 +30,14 @@ export default defineComponent({
 
 <template>
   <div class="container">
-    <h1 class="title">{{ title }}</h1>
-    <div class="text">text</div>
+    <h1 class="title">
+      {{ title }}
+      <img :src="mySvg" alt="" />
+    </h1>
+    <div>
+      <span class="text">text</span>
+      <img :src="testImg" alt="" />
+    </div>
     <JsxEl />
   </div>
 </template>
