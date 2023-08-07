@@ -8,6 +8,7 @@ specifiers:
   autoprefixer: ^10.4.14
   babel-loader: ^8.3.0
   browserslist: ^4.21.10
+  clean-webpack-plugin: ^4.0.0
   core-js: ^3.32.0
   css-loader: ^5.2.7
   file-loader: ^6.2.0
@@ -24,6 +25,7 @@ specifiers:
   webpack: ^4.46.0
   webpack-cli: ^3.3.12
   webpack-dev-server: ^3.11.3
+  webpack-merge: ^5.9.0
 
 dependencies:
   core-js: 3.32.0
@@ -37,6 +39,7 @@ devDependencies:
   autoprefixer: 10.4.14_postcss@8.4.27
   babel-loader: 8.3.0_mjsnzbi34d3prkab3a6smsve6m
   browserslist: 4.21.10
+  clean-webpack-plugin: 4.0.0_webpack@4.46.0
   css-loader: 5.2.7_webpack@4.46.0
   file-loader: 6.2.0_webpack@4.46.0
   html-webpack-plugin: 4.5.2_webpack@4.46.0
@@ -51,6 +54,7 @@ devDependencies:
   webpack: 4.46.0_webpack-cli@3.3.12
   webpack-cli: 3.3.12_webpack@4.46.0
   webpack-dev-server: 3.11.3_i3w7szmgtxghzdij4arpgmor5i
+  webpack-merge: 5.9.0
 
 packages:
 
@@ -2338,6 +2342,16 @@ packages:
     engines: {node: '>= 4.0'}
     dependencies:
       source-map: 0.6.1
+    dev: true
+
+  /clean-webpack-plugin/4.0.0_webpack@4.46.0:
+    resolution: {integrity: sha512-WuWE1nyTNAyW5T7oNyys2EN0cfP2fdRxhxnIQWiAp0bMabPdHhoGxM8A6YL2GhqwgrPnnaemVE7nv5XJ2Fhh2w==}
+    engines: {node: '>=10.0.0'}
+    peerDependencies:
+      webpack: '>=4.0.0 <6.0.0'
+    dependencies:
+      del: 4.1.1
+      webpack: 4.46.0_webpack-cli@3.3.12
     dev: true
 
   /cliui/5.0.0:
@@ -6739,6 +6753,14 @@ packages:
       uuid: 3.4.0
     dev: true
 
+  /webpack-merge/5.9.0:
+    resolution: {integrity: sha512-6NbRQw4+Sy50vYNTw7EyOn41OZItPiXB8GNv3INSoe3PSFaHJEz3SHTrYVaRm2LilNGnFUzh0FAwqPEmU/CwDg==}
+    engines: {node: '>=10.0.0'}
+    dependencies:
+      clone-deep: 4.0.1
+      wildcard: 2.0.1
+    dev: true
+
   /webpack-sources/1.4.3:
     resolution: {integrity: sha512-lgTS3Xhv1lCOKo7SA5TjKXMjpSM4sBjNV5+q2bqesbSPs5FjGmU6jjtBSkX9b4qW87vDIsCIlUPOEhbZrMdjeQ==}
     dependencies:
@@ -6831,6 +6853,10 @@ packages:
     hasBin: true
     dependencies:
       isexe: 2.0.0
+    dev: true
+
+  /wildcard/2.0.1:
+    resolution: {integrity: sha512-CC1bOL87PIWSBhDcTrdeLo6eGT7mCFtrg0uIJtqJUFyK+eJnzl8A1niH56uu7KMa5XFrtiV+AQuHO3n7DsHnLQ==}
     dev: true
 
   /worker-farm/1.7.0:
